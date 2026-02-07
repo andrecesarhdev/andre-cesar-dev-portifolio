@@ -3,7 +3,7 @@ const about = document.querySelector("#about");
 // Seletor da Seção Projects (Carrossel)
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 // Seletor do Formulário
-const formulario = document.querySelector('#formulario');
+const formulario = document.querySelector("#formulario");
 // Regex de validação do e-mail
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -92,7 +92,7 @@ async function getProjectsGithub() {
     repositorios.forEach((repositorio) => {
       const linguagemExibir = repositorio.language || "GitHub";
       const config = linguagens[repositorio.language] || { icone: "github" };
-      const urlIcone = `./assets/icons/languagues/${config.icone}.svg`;
+      const urlIcone = `./assets/icons/languages/${config.icone}.svg`;
 
       const nomeFormatado = repositorio.name
         .replace(/[-_]/g, "")
@@ -101,7 +101,7 @@ async function getProjectsGithub() {
 
       const descricao = repositorio.description
         ? repositorio.description.length > 100
-          ? repositorio.descricao.substring(0, 97) + "..."
+          ? repositorio.description.substring(0, 97) + "..."
           : repositorio.description
         : "Projeto Desenvolvido no GitHug";
 
